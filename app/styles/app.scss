@@ -1,13 +1,141 @@
+@import "reset";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@mixin header {
+    font-size: 3vmin;
+    font-weight: bold;
+    margin-bottom: 3vh;
+}
+
 * {
-    margin: 0;
+    font-family: 'Open Sans' !important;
 }
 
-body {
+a {
+    color: black;
+    text-decoration: none;
+}
+
+article {
+    line-height: 1.5;
+}
+
+header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 2vh 2vw;
+
+    /* Temporary */
+    padding-bottom: 80vh;
+
+    h1 {
+        @include header;
+        margin-bottom: 0;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        a {
+            padding: 0 1vw;
+        }
+    }
 }
 
-embed {
-    width: 60vw;
-    height: 95vh;
+.about {
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include header;
+    }
+
+    article {
+        text-align: center;
+    }
+
+    /* Temporary */
+    padding-bottom: 20vh;
+}
+
+.resume {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include header;
+    }
+
+    object {
+        width: 80vw; height: 80vh;
+    }
+
+    /* Temporary */
+    padding-bottom: 20vh;
+}
+
+.portfolio {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include header;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5vh 0;
+
+        div {
+            width: 15vw; height: 15vw;
+            background-color: green;
+        }
+    }
+
+    .viewer {
+        width: 90vw; height: 70vh;
+        margin: 3vh 0 10vh 0;
+        background-color: LawnGreen;
+    }
+}
+
+.contact {
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include header;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        width: inherit;
+    }
+
+    /* Temporary */
+    padding-bottom: 10vh;
+}
+
+footer {
+    padding: 3vh 2vw;
 }
